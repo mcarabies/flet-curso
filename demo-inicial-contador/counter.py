@@ -25,7 +25,7 @@ def main(page:Page):
         )
     )
 #modo Desktop
-#flet.app(target=main)
+flet.app(target=main)
 
 #modo web
-flet.app(target=main, view=flet.WEB_BROWSER)
+#flet.app(target=main, view=flet.WEB_BROWSER)
