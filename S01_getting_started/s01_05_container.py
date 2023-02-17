@@ -2,11 +2,15 @@ import flet
 from flet import Page, Row, Text
 
 def main(page: Page):
-    row_datos= Row(controls=[
-            Text("Python", color="blue"),
-            Text("Flet", color="green"),
-            Text("Flutter", color="red")
-    ])
+    lenguajes = [
+        ("Python","blue"),
+        ("Flet", "green"),
+        ("Flutter", "red")
+    ]
+    etiquetas = []
+    for etiqueta in lenguajes:
+        etiquetas.append(Text(etiqueta[0],color=etiqueta[1]))
+    row_datos= Row(controls=etiquetas)
     page.add(row_datos)
     
 
