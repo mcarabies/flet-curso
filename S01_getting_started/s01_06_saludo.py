@@ -1,13 +1,15 @@
 import flet
 from flet import Page, Row, TextField, ElevatedButton, Text
 
-def saludar(event):
-    print("Hola!!!")
-    print("Chau!!!")
+
     
 def main(page: Page):
+    txt_nombre = TextField(label="Digite su nombre")
+    def saludar(event):
+        print(f"Hola {txt_nombre.value}")
+    
     row = Row(controls = [
-        TextField(label="Digite su nombre"),
+        txt_nombre,
         ElevatedButton(text="Saludar", on_click=saludar)
     ])
 
