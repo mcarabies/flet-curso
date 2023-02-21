@@ -3,6 +3,7 @@ from flet import Page, Row, TextField, ElevatedButton, Text
 
 def saludar(event):
     print("Hola!!!")
+    print("Chau!!!")
     
 def main(page: Page):
     row = Row(controls = [
