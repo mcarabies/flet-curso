@@ -8,14 +8,14 @@ def main(page:Page):
     col_controles = Ref[Column]()
     
     def saludar_clicked(event):
-        col_controles.controls.append(Text(f"Hola, {txt_first_name.current.value} {txt_last_name.current.value}!!!"))
+        col_controles.current.controls.append(Text(f"Hola, {txt_first_name.current.value} {txt_last_name.current.value}!!!"))
         
         txt_first_name.current.value = ''
         txt_last_name.current.value = ''
         
         page.update()
         
-        txt_first_name.focus()
+        txt_first_name.current.focus()
     
     btn_saludar = ElevatedButton('Saludar', on_click=saludar_clicked)
     
