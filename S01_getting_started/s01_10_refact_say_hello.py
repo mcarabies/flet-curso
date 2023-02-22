@@ -1,17 +1,17 @@
 import flet
-from flet import Page, Column, ElevatedButton, Text, TextField
+from flet import Page, Column, ElevatedButton, Text, TextField,Ref
 
 def main(page:Page):
-    txt_first_name = TextField(label='nombre', autofocus=True)
-    txt_last_name = TextField(label='Apellido')
+    txt_first_name = Ref[TextField]()
+    txt_last_name = Ref[TextField]()
     
-    col_controles = Column()
+    col_controles = Ref[Column]()
     
     def saludar_clicked(event):
-        col_controles.controls.append(Text(f"Hola, {txt_first_name.value} {txt_last_name.value}!!!"))
+        col_controles.controls.append(Text(f"Hola, {txt_first_name.current.value} {txt_last_name.current.value}!!!"))
         
-        txt_first_name.value = ''
-        txt_last_name.value = ''
+        txt_first_name.current.value = ''
+        txt_last_name.current.value = ''
         
         page.update()
         
