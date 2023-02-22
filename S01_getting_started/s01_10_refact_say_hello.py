@@ -19,6 +19,10 @@ def main(page:Page):
     
     btn_saludar = ElevatedButton('Saludar', on_click=saludar_clicked)
     
-    page.add(txt_first_name, txt_last_name, btn_saludar, col_controles)
+    page.add(
+        TextField(ref=txt_first_name, label='Nombre', autofocus=True), 
+        TextField(ref=txt_last_name, label='Apellido'), 
+        btn_saludar, 
+        Column(ref=col_controles))
     
 flet.app(target=main)
