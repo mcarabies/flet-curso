@@ -10,6 +10,9 @@ def main(page:Page):
 
     col_controles = Column(controls=[txt_first_name,txt_last_name])
     
+    #aplicando el disabled al componente padre
+    col_controles.disabled = True
+    
     page.add(col_controles)
 
 flet.app(target=main)
