@@ -1,4 +1,3 @@
-import os
 import flet
 from flet import Page, ListView, Text
 
