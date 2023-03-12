@@ -8,7 +8,7 @@ def main(page:Page):
     for i in range(50000):
         lvw_lineas.controls.append(Text(f'Linea: {i}'))
         
-        if i % 300 == 0:
+        if i % 500 == 0:
             page.update()
     
     page.update()
